@@ -1,0 +1,604 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- SK ON Color Palette -->
+    <Color x:Key="SK.PrimaryColor">#ED1C24</Color>
+    <!-- SK Red -->
+    <Color x:Key="SK.SecondaryColor">#00A651</Color>
+    <!-- SK Green -->
+    <Color x:Key="SK.AccentColor">#0070C0</Color>
+    <!-- SK Blue -->
+    <Color x:Key="SK.DarkGray">#1A1A1A</Color>
+    <!-- Dark Background -->
+    <Color x:Key="SK.MediumGray">#222222</Color>
+    <!-- Medium Background -->
+    <Color x:Key="SK.LightGray">#3D3D3D</Color>
+    <!-- Light Background -->
+    <Color x:Key="SK.White">#FFFFFF</Color>
+    <!-- White Text -->
+    <Color x:Key="SK.Black">#000000</Color>
+    <!-- Black Text -->
+    <Color x:Key="SK.Success">#00A651</Color>
+    <!-- Success Green -->
+    <Color x:Key="SK.Warning">#F7931E</Color>
+    <!-- Warning Orange -->
+    <Color x:Key="SK.Error">#ED1C24</Color>
+    <!-- Error Red -->
+
+    <!-- Brushes -->
+    <SolidColorBrush x:Key="SK.PrimaryBrush"
+                     Color="{StaticResource SK.PrimaryColor}" />
+    <SolidColorBrush x:Key="SK.SecondaryBrush"
+                     Color="{StaticResource SK.SecondaryColor}" />
+    <SolidColorBrush x:Key="SK.AccentBrush"
+                     Color="{StaticResource SK.AccentColor}" />
+    <SolidColorBrush x:Key="SK.DarkGrayBrush"
+                     Color="{StaticResource SK.DarkGray}" />
+    <SolidColorBrush x:Key="SK.MediumGrayBrush"
+                     Color="{StaticResource SK.MediumGray}" />
+    <SolidColorBrush x:Key="SK.LightGrayBrush"
+                     Color="{StaticResource SK.LightGray}" />
+    <SolidColorBrush x:Key="SK.WhiteBrush"
+                     Color="{StaticResource SK.White}" />
+    <SolidColorBrush x:Key="SK.BlackBrush"
+                     Color="{StaticResource SK.Black}" />
+    <SolidColorBrush x:Key="SK.SuccessBrush"
+                     Color="{StaticResource SK.Success}" />
+    <SolidColorBrush x:Key="SK.WarningBrush"
+                     Color="{StaticResource SK.Warning}" />
+    <SolidColorBrush x:Key="SK.ErrorBrush"
+                     Color="{StaticResource SK.Error}" />
+
+    <!-- Gradients -->
+    <LinearGradientBrush x:Key="SK.HeaderGradient"
+                         StartPoint="0,0"
+                         EndPoint="1,0">
+        <GradientStop Color="{StaticResource SK.PrimaryColor}"
+                      Offset="0" />
+        <GradientStop Color="{StaticResource SK.AccentColor}"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="SK.BackgroundGradient"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="{StaticResource SK.DarkGray}"
+                      Offset="0" />
+        <GradientStop Color="#121212"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- Font Styles -->
+    <Style x:Key="SK.FontTitle"
+           TargetType="TextBlock">
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+        <Setter Property="FontSize"
+                Value="22" />
+        <Setter Property="Foreground"
+                Value="{StaticResource SK.WhiteBrush}" />
+    </Style>
+
+    <Style x:Key="SK.FontSubtitle"
+           TargetType="TextBlock">
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="SemiBold" />
+        <Setter Property="FontSize"
+                Value="18" />
+        <Setter Property="Foreground"
+                Value="{StaticResource SK.WhiteBrush}" />
+    </Style>
+
+    <Style x:Key="SK.FontBodyBold"
+           TargetType="TextBlock">
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="SemiBold" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="Foreground"
+                Value="{StaticResource SK.WhiteBrush}" />
+    </Style>
+
+    <Style x:Key="SK.FontBody"
+           TargetType="TextBlock">
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="Normal" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="Foreground"
+                Value="{StaticResource SK.WhiteBrush}" />
+    </Style>
+
+    <Style x:Key="SK.FontSmall"
+           TargetType="TextBlock">
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="Normal" />
+        <Setter Property="FontSize"
+                Value="12" />
+        <Setter Property="Foreground"
+                Value="{StaticResource SK.WhiteBrush}" />
+    </Style>
+
+    <!-- Header Styles -->
+    <Style x:Key="SK.Header"
+           TargetType="TextBlock">
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+        <Setter Property="FontSize"
+                Value="22" />
+        <Setter Property="Foreground"
+                Value="{StaticResource SK.WhiteBrush}" />
+        <Setter Property="Padding"
+                Value="10" />
+        <Setter Property="Background"
+                Value="{StaticResource SK.PrimaryBrush}" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="TextAlignment"
+                Value="Center" />
+    </Style>
+
+    <!-- Button Styles -->
+    <Style x:Key="SK.ButtonPrimary"
+           TargetType="Button">
+        <Setter Property="Background"
+                Value="{StaticResource SK.PrimaryBrush}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource SK.WhiteBrush}" />
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="SemiBold" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="Padding"
+                Value="16,8" />
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            CornerRadius="4"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    Value="#FF392A" />
+                            <Setter Property="Cursor"
+                                    Value="Hand" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    Value="#C91118" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="False">
+                            <Setter Property="Background"
+                                    Value="{StaticResource SK.LightGrayBrush}" />
+                            <Setter Property="Foreground"
+                                    Value="{StaticResource SK.MediumGrayBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SK.ButtonSecondary"
+           TargetType="Button">
+        <Setter Property="Background"
+                Value="{StaticResource SK.AccentBrush}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource SK.WhiteBrush}" />
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="Medium" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="Padding"
+                Value="16,8" />
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            CornerRadius="4"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    Value="#0088E0" />
+                            <Setter Property="Cursor"
+                                    Value="Hand" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    Value="#005A9A" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="False">
+                            <Setter Property="Background"
+                                    Value="{StaticResource SK.LightGrayBrush}" />
+                            <Setter Property="Foreground"
+                                    Value="{StaticResource SK.MediumGrayBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ToggleButton Style -->
+    <Style x:Key="SK.ToggleButton"
+           TargetType="ToggleButton">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border x:Name="border"
+                            Background="{StaticResource SK.MediumGrayBrush}"
+                            BorderBrush="#555555"
+                            BorderThickness="1"
+                            CornerRadius="15"
+                            Width="60"
+                            Height="30">
+                        <Grid>
+                            <Ellipse x:Name="knob"
+                                     Width="24"
+                                     Height="24"
+                                     Fill="{StaticResource SK.WhiteBrush}"
+                                     HorizontalAlignment="Left"
+                                     Margin="3,0,0,0" />
+                            <TextBlock x:Name="offText"
+                                       Text="OFF"
+                                       Foreground="{StaticResource SK.WhiteBrush}"
+                                       FontSize="10"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Right"
+                                       Margin="0,0,5,0" />
+                            <TextBlock x:Name="onText"
+                                       Text="ON"
+                                       Foreground="{StaticResource SK.WhiteBrush}"
+                                       FontSize="10"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       Margin="5,0,0,0"
+                                       Visibility="Collapsed" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked"
+                                 Value="True">
+                            <Setter TargetName="border"
+                                    Property="Background"
+                                    Value="{StaticResource SK.SecondaryBrush}" />
+                            <Setter TargetName="knob"
+                                    Property="HorizontalAlignment"
+                                    Value="Right" />
+                            <Setter TargetName="knob"
+                                    Property="Margin"
+                                    Value="0,0,3,0" />
+                            <Setter TargetName="offText"
+                                    Property="Visibility"
+                                    Value="Collapsed" />
+                            <Setter TargetName="onText"
+                                    Property="Visibility"
+                                    Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="border"
+                                    Property="BorderBrush"
+                                    Value="{StaticResource SK.WhiteBrush}" />
+                            <Setter Property="Cursor"
+                                    Value="Hand" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- TextBox Style -->
+    <Style x:Key="SK.TextBox"
+           TargetType="TextBox">
+        <Setter Property="Background"
+                Value="{StaticResource SK.DarkGrayBrush}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource SK.WhiteBrush}" />
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="BorderBrush"
+                Value="#555555" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="Padding"
+                Value="8,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="4">
+                        <ScrollViewer x:Name="PART_ContentHost"
+                                      Focusable="False"
+                                      VerticalAlignment="Center"
+                                      Margin="{TemplateBinding Padding}"
+                                      HorizontalScrollBarVisibility="Hidden"
+                                      VerticalScrollBarVisibility="Hidden" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="BorderBrush"
+                                    Value="{StaticResource SK.AccentBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsFocused"
+                                 Value="True">
+                            <Setter Property="BorderBrush"
+                                    Value="{StaticResource SK.AccentBrush}" />
+                            <Setter Property="BorderThickness"
+                                    Value="2" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Digital Display TextBox -->
+    <Style x:Key="SK.DigitalDisplayTextBox"
+           TargetType="TextBox">
+        <Setter Property="Background"
+                Value="Black" />
+        <Setter Property="Foreground"
+                Value="#00FFAE" />
+        <Setter Property="FontFamily"
+                Value="Consolas" />
+        <Setter Property="FontSize"
+                Value="18" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+        <Setter Property="BorderBrush"
+                Value="#555555" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="Padding"
+                Value="8,5" />
+        <Setter Property="TextAlignment"
+                Value="Right" />
+        <Setter Property="IsReadOnly"
+                Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="4">
+                        <ScrollViewer x:Name="PART_ContentHost"
+                                      Focusable="False"
+                                      VerticalAlignment="Center"
+                                      Margin="{TemplateBinding Padding}"
+                                      HorizontalScrollBarVisibility="Hidden"
+                                      VerticalScrollBarVisibility="Hidden" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ComboBox Style -->
+    <Style x:Key="SK.ComboBox"
+           TargetType="ComboBox">
+        <Setter Property="Background"
+                Value="{StaticResource SK.DarkGrayBrush}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource SK.WhiteBrush}" />
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="BorderBrush"
+                Value="#555555" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="Padding"
+                Value="8,5" />
+        <Setter Property="SnapsToDevicePixels"
+                Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComboBox">
+                    <Grid>
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <ContentPresenter Grid.Column="0"
+                                                  Content="{TemplateBinding SelectionBoxItem}"
+                                                  ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                                  ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                                  VerticalAlignment="Center"
+                                                  Margin="{TemplateBinding Padding}" />
+                                <Path x:Name="arrow"
+                                      Grid.Column="1"
+                                      Data="M0,0 L7,0 L3.5,4 z"
+                                      Fill="{StaticResource SK.WhiteBrush}"
+                                      VerticalAlignment="Center"
+                                      Margin="0,0,8,0" />
+                            </Grid>
+                        </Border>
+                        <Popup x:Name="PART_Popup"
+                               AllowsTransparency="True"
+                               IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}"
+                               Placement="Bottom"
+                               PopupAnimation="Fade"
+                               StaysOpen="False">
+                            <Border Background="{StaticResource SK.MediumGrayBrush}"
+                                    BorderBrush="#555555"
+                                    BorderThickness="1"
+                                    CornerRadius="0,0,4,4"
+                                    MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                <ScrollViewer SnapsToDevicePixels="True">
+                                    <ItemsPresenter KeyboardNavigation.DirectionalNavigation="Contained" />
+                                </ScrollViewer>
+                            </Border>
+                        </Popup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="border"
+                                    Property="BorderBrush"
+                                    Value="{StaticResource SK.AccentBrush}" />
+                            <Setter Property="Cursor"
+                                    Value="Hand" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="False">
+                            <Setter TargetName="border"
+                                    Property="Opacity"
+                                    Value="0.6" />
+                            <Setter TargetName="arrow"
+                                    Property="Opacity"
+                                    Value="0.6" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- DataGrid Styles -->
+    <Style x:Key="SK.DataGrid"
+           TargetType="DataGrid">
+        <Setter Property="Background"
+                Value="{StaticResource SK.DarkGrayBrush}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource SK.WhiteBrush}" />
+        <Setter Property="BorderBrush"
+                Value="#555555" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="RowBackground"
+                Value="{StaticResource SK.MediumGrayBrush}" />
+        <Setter Property="AlternatingRowBackground"
+                Value="{StaticResource SK.DarkGrayBrush}" />
+        <Setter Property="GridLinesVisibility"
+                Value="All" />
+        <Setter Property="VerticalGridLinesBrush"
+                Value="#555555" />
+        <Setter Property="HorizontalGridLinesBrush"
+                Value="#555555" />
+        <Setter Property="RowHeaderWidth"
+                Value="0" />
+        <Setter Property="CanUserAddRows"
+                Value="False" />
+        <Setter Property="CanUserDeleteRows"
+                Value="False" />
+        <Setter Property="HeadersVisibility"
+                Value="Column" />
+    </Style>
+
+    <Style x:Key="SK.DataGridColumnHeader"
+           TargetType="DataGridColumnHeader">
+        <Setter Property="Background"
+                Value="{StaticResource SK.AccentBrush}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource SK.WhiteBrush}" />
+        <Setter Property="FontWeight"
+                Value="SemiBold" />
+        <Setter Property="Padding"
+                Value="10,5" />
+        <Setter Property="BorderBrush"
+                Value="#555555" />
+        <Setter Property="BorderThickness"
+                Value="0,0,1,1" />
+    </Style>
+
+    <Style x:Key="SK.DataGridCell"
+           TargetType="DataGridCell">
+        <Setter Property="BorderBrush"
+                Value="#555555" />
+        <Setter Property="BorderThickness"
+                Value="0,0,1,1" />
+        <Setter Property="Padding"
+                Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="DataGridCell">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsSelected"
+                     Value="True">
+                <Setter Property="Background"
+                        Value="#1A5C86" />
+                <Setter Property="Foreground"
+                        Value="White" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Border Style -->
+    <Style x:Key="SK.Border"
+           TargetType="Border">
+        <Setter Property="Background"
+                Value="{StaticResource SK.MediumGrayBrush}" />
+        <Setter Property="BorderBrush"
+                Value="#555555" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="CornerRadius"
+                Value="5" />
+    </Style>
+
+    <!-- Panel Style -->
+    <Style x:Key="SK.Panel"
+           TargetType="Grid">
+        <Setter Property="Background"
+                Value="{StaticResource SK.MediumGrayBrush}" />
+    </Style>
+</ResourceDictionary>

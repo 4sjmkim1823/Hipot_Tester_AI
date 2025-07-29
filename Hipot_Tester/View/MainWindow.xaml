@@ -1,0 +1,82 @@
+<Window x:Class="Hipot_Tester.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Hipot Tester" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- 상단 메뉴 -->
+        <Menu Grid.Row="0">
+            <MenuItem Header="File">
+                <MenuItem Header="Save Test Result" 
+                          Command="{Binding SaveTestResultCommand}"/>
+            </MenuItem>
+        </Menu>
+
+        <!-- 메인 콘텐츠 -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- 장비 선택 및 연결 -->
+            <GroupBox Grid.Column="0" Header="Device Connection" Margin="10">
+                <StackPanel>
+                    <ComboBox ItemsSource="{Binding DeviceSelectionViewModel.AvailablePorts}"
+                              SelectedItem="{Binding DeviceSelectionViewModel.SelectedPort}"
+                              Margin="5"/>
+                    <Button Content="Connect" 
+                            Command="{Binding DeviceSelectionViewModel.ConnectCommand}"
+                            Margin="5"/>
+                    <Button Content="Disconnect" 
+                            Command="{Binding DeviceSelectionViewModel.DisconnectCommand}"
+                            Margin="5"/>
+                    <TextBlock Text="{Binding DeviceSelectionViewModel.StatusMessage}"
+                               Margin="5"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- 테스트 제어 -->
+            <GroupBox Grid.Column="1" Header="Test Control" Margin="10">
+                <StackPanel>
+                    <Button Content="Start Test" 
+                            Command="{Binding IRModeViewModel.StartTestCommand}"
+                            Margin="5"/>
+                    <Button Content="Stop Test" 
+                            Command="{Binding IRModeViewModel.StopTestCommand}"
+                            Margin="5"/>
+                    <TextBlock Text="{Binding IRModeViewModel.StatusMessage}"
+                               Margin="5"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- 측정값 표시 -->
+            <GroupBox Grid.Row="1" Grid.ColumnSpan="2" Header="Measurements" Margin="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" 
+                               Text="{Binding IRModeViewModel.CurrentVoltage, StringFormat='Voltage: {0:F2} V'}"
+                               Margin="5"/>
+                    <TextBlock Grid.Column="1" 
+                               Text="{Binding IRModeViewModel.CurrentCurrent, StringFormat='Current: {0:F2} A'}"
+                               Margin="5"/>
+                </Grid>
+            </GroupBox>
+        </Grid>
+
+        <!-- 하단 상태바 -->
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>
+                <TextBlock Text="{Binding StatusMessage}"/>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window> 

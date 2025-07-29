@@ -1,0 +1,51 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="Button" x:Key="StyleButtonRound2">
+        <Setter Property="Background" Value="#FF263645"/>
+        <Setter Property="Foreground" Value="white"/>
+        <Setter Property="BorderBrush" Value="LightSteelBlue"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="Height" Value="30"/>
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+
+    <Style TargetType="Button" x:Key="StyleRound">
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="75"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+
+    <Style TargetType="Button" x:Key="StyleButtonDefault2">
+        <Setter Property="Background" Value="#DFDFDF"/>
+        <Setter Property="Foreground" Value="#0C4F7D"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="BorderBrush" Value="LightBlue"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="Margin" Value="2,2,2,2"/>
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+        </Style.Resources>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="Blue" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Foreground" Value="Red" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

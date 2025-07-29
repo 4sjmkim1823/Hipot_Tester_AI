@@ -1,0 +1,606 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- LG Energy Solution Color Palette -->
+    <Color x:Key="LG.PrimaryColor">#A50034</Color>
+    <!-- LG Red -->
+    <Color x:Key="LG.SecondaryColor">#333F48</Color>
+    <!-- Dark Blue/Gray -->
+    <Color x:Key="LG.AccentColor">#B1B3B3</Color>
+    <!-- Silver Gray -->
+    <Color x:Key="LG.DarkGray">#1E1E1E</Color>
+    <!-- Dark Background -->
+    <Color x:Key="LG.MediumGray">#2D2D2D</Color>
+    <!-- Medium Background -->
+    <Color x:Key="LG.LightGray">#4D4D4D</Color>
+    <!-- Light Background -->
+    <Color x:Key="LG.White">#FFFFFF</Color>
+    <!-- White Text -->
+    <Color x:Key="LG.Black">#000000</Color>
+    <!-- Black Text -->
+    <Color x:Key="LG.Success">#00B140</Color>
+    <!-- Success Green -->
+    <Color x:Key="LG.Warning">#F2A900</Color>
+    <!-- Warning Yellow -->
+    <Color x:Key="LG.Error">#E31937</Color>
+    <!-- Error Red -->
+
+    <!-- Brushes -->
+    <SolidColorBrush x:Key="LG.PrimaryBrush"
+                     Color="{StaticResource LG.PrimaryColor}" />
+    <SolidColorBrush x:Key="LG.SecondaryBrush"
+                     Color="{StaticResource LG.SecondaryColor}" />
+    <SolidColorBrush x:Key="LG.AccentBrush"
+                     Color="{StaticResource LG.AccentColor}" />
+    <SolidColorBrush x:Key="LG.DarkGrayBrush"
+                     Color="{StaticResource LG.DarkGray}" />
+    <SolidColorBrush x:Key="LG.MediumGrayBrush"
+                     Color="{StaticResource LG.MediumGray}" />
+    <SolidColorBrush x:Key="LG.LightGrayBrush"
+                     Color="{StaticResource LG.LightGray}" />
+    <SolidColorBrush x:Key="LG.WhiteBrush"
+                     Color="{StaticResource LG.White}" />
+    <SolidColorBrush x:Key="LG.BlackBrush"
+                     Color="{StaticResource LG.Black}" />
+    <SolidColorBrush x:Key="LG.SuccessBrush"
+                     Color="{StaticResource LG.Success}" />
+    <SolidColorBrush x:Key="LG.WarningBrush"
+                     Color="{StaticResource LG.Warning}" />
+    <SolidColorBrush x:Key="LG.ErrorBrush"
+                     Color="{StaticResource LG.Error}" />
+
+    <!-- Gradients -->
+    <LinearGradientBrush x:Key="LG.HeaderGradient"
+                         StartPoint="0,0"
+                         EndPoint="1,0">
+        <GradientStop Color="{StaticResource LG.PrimaryColor}"
+                      Offset="0" />
+        <GradientStop Color="{StaticResource LG.SecondaryColor}"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="LG.BackgroundGradient"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="{StaticResource LG.DarkGray}"
+                      Offset="0" />
+        <GradientStop Color="{StaticResource LG.MediumGray}"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- Font Styles -->
+    <Style x:Key="LG.FontTitle"
+           TargetType="TextBlock">
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="SemiBold" />
+        <Setter Property="FontSize"
+                Value="22" />
+        <Setter Property="Foreground"
+                Value="{StaticResource LG.WhiteBrush}" />
+    </Style>
+
+    <Style x:Key="LG.FontSubtitle"
+           TargetType="TextBlock">
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="Medium" />
+        <Setter Property="FontSize"
+                Value="18" />
+        <Setter Property="Foreground"
+                Value="{StaticResource LG.WhiteBrush}" />
+    </Style>
+
+    <Style x:Key="LG.FontBodyBold"
+           TargetType="TextBlock">
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="SemiBold" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="Foreground"
+                Value="{StaticResource LG.WhiteBrush}" />
+    </Style>
+
+    <Style x:Key="LG.FontBody"
+           TargetType="TextBlock">
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="Normal" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="Foreground"
+                Value="{StaticResource LG.WhiteBrush}" />
+    </Style>
+
+    <Style x:Key="LG.FontSmall"
+           TargetType="TextBlock">
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="Normal" />
+        <Setter Property="FontSize"
+                Value="12" />
+        <Setter Property="Foreground"
+                Value="{StaticResource LG.WhiteBrush}" />
+    </Style>
+
+    <!-- Header Styles -->
+    <Style x:Key="LG.Header"
+           TargetType="TextBlock">
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+        <Setter Property="FontSize"
+                Value="22" />
+        <Setter Property="Foreground"
+                Value="{StaticResource LG.WhiteBrush}" />
+        <Setter Property="Padding"
+                Value="10" />
+        <Setter Property="Background"
+                Value="{StaticResource LG.PrimaryBrush}" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="TextAlignment"
+                Value="Center" />
+    </Style>
+
+    <!-- Button Styles -->
+    <Style x:Key="LG.ButtonPrimary"
+           TargetType="Button">
+        <Setter Property="Background"
+                Value="{StaticResource LG.PrimaryBrush}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource LG.WhiteBrush}" />
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="SemiBold" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="Padding"
+                Value="16,8" />
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            CornerRadius="4"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    Value="#C50034" />
+                            <Setter Property="Cursor"
+                                    Value="Hand" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    Value="#830028" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="False">
+                            <Setter Property="Background"
+                                    Value="{StaticResource LG.LightGrayBrush}" />
+                            <Setter Property="Foreground"
+                                    Value="{StaticResource LG.AccentBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LG.ButtonSecondary"
+           TargetType="Button">
+        <Setter Property="Background"
+                Value="{StaticResource LG.SecondaryBrush}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource LG.WhiteBrush}" />
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontWeight"
+                Value="Medium" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="Padding"
+                Value="16,8" />
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            CornerRadius="4"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    Value="#455560" />
+                            <Setter Property="Cursor"
+                                    Value="Hand" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    Value="#28323A" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="False">
+                            <Setter Property="Background"
+                                    Value="{StaticResource LG.LightGrayBrush}" />
+                            <Setter Property="Foreground"
+                                    Value="{StaticResource LG.AccentBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ToggleButton Style -->
+    <Style x:Key="LG.ToggleButton"
+           TargetType="ToggleButton">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border x:Name="border"
+                            Background="{StaticResource LG.DarkGrayBrush}"
+                            BorderBrush="{StaticResource LG.AccentBrush}"
+                            BorderThickness="1"
+                            CornerRadius="15"
+                            Width="60"
+                            Height="30">
+                        <Grid>
+                            <Ellipse x:Name="knob"
+                                     Width="24"
+                                     Height="24"
+                                     Fill="{StaticResource LG.WhiteBrush}"
+                                     HorizontalAlignment="Left"
+                                     Margin="3,0,0,0" />
+                            <TextBlock x:Name="offText"
+                                       Text="OFF"
+                                       Foreground="{StaticResource LG.WhiteBrush}"
+                                       FontSize="10"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Right"
+                                       Margin="0,0,5,0" />
+                            <TextBlock x:Name="onText"
+                                       Text="ON"
+                                       Foreground="{StaticResource LG.WhiteBrush}"
+                                       FontSize="10"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       Margin="5,0,0,0"
+                                       Visibility="Collapsed" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked"
+                                 Value="True">
+                            <Setter TargetName="border"
+                                    Property="Background"
+                                    Value="{StaticResource LG.PrimaryBrush}" />
+                            <Setter TargetName="knob"
+                                    Property="HorizontalAlignment"
+                                    Value="Right" />
+                            <Setter TargetName="knob"
+                                    Property="Margin"
+                                    Value="0,0,3,0" />
+                            <Setter TargetName="offText"
+                                    Property="Visibility"
+                                    Value="Collapsed" />
+                            <Setter TargetName="onText"
+                                    Property="Visibility"
+                                    Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="border"
+                                    Property="BorderBrush"
+                                    Value="{StaticResource LG.WhiteBrush}" />
+                            <Setter Property="Cursor"
+                                    Value="Hand" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- TextBox Style -->
+    <Style x:Key="LG.TextBox"
+           TargetType="TextBox">
+        <Setter Property="Background"
+                Value="{StaticResource LG.DarkGrayBrush}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource LG.WhiteBrush}" />
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="FontWeight"
+                Value="Normal" />
+        <Setter Property="BorderBrush"
+                Value="{StaticResource LG.AccentBrush}" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="Padding"
+                Value="8,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="4">
+                        <ScrollViewer x:Name="PART_ContentHost"
+                                      Focusable="False"
+                                      VerticalAlignment="Center"
+                                      Margin="{TemplateBinding Padding}"
+                                      HorizontalScrollBarVisibility="Hidden"
+                                      VerticalScrollBarVisibility="Hidden" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="BorderBrush"
+                                    Value="{StaticResource LG.PrimaryBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsFocused"
+                                 Value="True">
+                            <Setter Property="BorderBrush"
+                                    Value="{StaticResource LG.PrimaryBrush}" />
+                            <Setter Property="BorderThickness"
+                                    Value="2" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Digital Display TextBox -->
+    <Style x:Key="LG.DigitalDisplayTextBox"
+           TargetType="TextBox">
+        <Setter Property="Background"
+                Value="Black" />
+        <Setter Property="Foreground"
+                Value="#00FF00" />
+        <Setter Property="FontFamily"
+                Value="Consolas" />
+        <Setter Property="FontSize"
+                Value="18" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+        <Setter Property="BorderBrush"
+                Value="{StaticResource LG.AccentBrush}" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="Padding"
+                Value="8,5" />
+        <Setter Property="TextAlignment"
+                Value="Right" />
+        <Setter Property="IsReadOnly"
+                Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="4">
+                        <ScrollViewer x:Name="PART_ContentHost"
+                                      Focusable="False"
+                                      VerticalAlignment="Center"
+                                      Margin="{TemplateBinding Padding}"
+                                      HorizontalScrollBarVisibility="Hidden"
+                                      VerticalScrollBarVisibility="Hidden" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ComboBox Style -->
+    <Style x:Key="LG.ComboBox"
+           TargetType="ComboBox">
+        <Setter Property="Background"
+                Value="{StaticResource LG.DarkGrayBrush}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource LG.WhiteBrush}" />
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="BorderBrush"
+                Value="{StaticResource LG.AccentBrush}" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="Padding"
+                Value="8,5" />
+        <Setter Property="SnapsToDevicePixels"
+                Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComboBox">
+                    <Grid>
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <ContentPresenter Grid.Column="0"
+                                                  Content="{TemplateBinding SelectionBoxItem}"
+                                                  ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                                  ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                                  VerticalAlignment="Center"
+                                                  Margin="{TemplateBinding Padding}" />
+                                <Path x:Name="arrow"
+                                      Grid.Column="1"
+                                      Data="M0,0 L7,0 L3.5,4 z"
+                                      Fill="{StaticResource LG.WhiteBrush}"
+                                      VerticalAlignment="Center"
+                                      Margin="0,0,8,0" />
+                            </Grid>
+                        </Border>
+                        <Popup x:Name="PART_Popup"
+                               AllowsTransparency="True"
+                               IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}"
+                               Placement="Bottom"
+                               PopupAnimation="Fade"
+                               StaysOpen="False">
+                            <Border Background="{StaticResource LG.MediumGrayBrush}"
+                                    BorderBrush="{StaticResource LG.AccentBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="0,0,4,4"
+                                    MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                <ScrollViewer SnapsToDevicePixels="True">
+                                    <ItemsPresenter KeyboardNavigation.DirectionalNavigation="Contained" />
+                                </ScrollViewer>
+                            </Border>
+                        </Popup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="border"
+                                    Property="BorderBrush"
+                                    Value="{StaticResource LG.PrimaryBrush}" />
+                            <Setter Property="Cursor"
+                                    Value="Hand" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="False">
+                            <Setter TargetName="border"
+                                    Property="Opacity"
+                                    Value="0.6" />
+                            <Setter TargetName="arrow"
+                                    Property="Opacity"
+                                    Value="0.6" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- DataGrid Styles -->
+    <Style x:Key="LG.DataGrid"
+           TargetType="DataGrid">
+        <Setter Property="Background"
+                Value="{StaticResource LG.DarkGrayBrush}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource LG.WhiteBrush}" />
+        <Setter Property="BorderBrush"
+                Value="{StaticResource LG.AccentBrush}" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="RowBackground"
+                Value="{StaticResource LG.MediumGrayBrush}" />
+        <Setter Property="AlternatingRowBackground"
+                Value="{StaticResource LG.DarkGrayBrush}" />
+        <Setter Property="GridLinesVisibility"
+                Value="All" />
+        <Setter Property="VerticalGridLinesBrush"
+                Value="{StaticResource LG.AccentBrush}" />
+        <Setter Property="HorizontalGridLinesBrush"
+                Value="{StaticResource LG.AccentBrush}" />
+        <Setter Property="RowHeaderWidth"
+                Value="0" />
+        <Setter Property="CanUserAddRows"
+                Value="False" />
+        <Setter Property="CanUserDeleteRows"
+                Value="False" />
+        <Setter Property="HeadersVisibility"
+                Value="Column" />
+    </Style>
+
+    <Style x:Key="LG.DataGridColumnHeader"
+           TargetType="DataGridColumnHeader">
+        <Setter Property="Background"
+                Value="{StaticResource LG.PrimaryBrush}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource LG.WhiteBrush}" />
+        <Setter Property="FontWeight"
+                Value="SemiBold" />
+        <Setter Property="Padding"
+                Value="10,5" />
+        <Setter Property="BorderBrush"
+                Value="{StaticResource LG.AccentBrush}" />
+        <Setter Property="BorderThickness"
+                Value="0,0,1,1" />
+    </Style>
+
+    <Style x:Key="LG.DataGridCell"
+           TargetType="DataGridCell">
+        <Setter Property="BorderBrush"
+                Value="{StaticResource LG.AccentBrush}" />
+        <Setter Property="BorderThickness"
+                Value="0,0,1,1" />
+        <Setter Property="Padding"
+                Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="DataGridCell">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsSelected"
+                     Value="True">
+                <Setter Property="Background"
+                        Value="#3D0011" />
+                <Setter Property="Foreground"
+                        Value="White" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Border Style -->
+    <Style x:Key="LG.Border"
+           TargetType="Border">
+        <Setter Property="Background"
+                Value="{StaticResource LG.MediumGrayBrush}" />
+        <Setter Property="BorderBrush"
+                Value="{StaticResource LG.SecondaryBrush}" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="CornerRadius"
+                Value="5" />
+    </Style>
+
+    <!-- Panel Style -->
+    <Style x:Key="LG.Panel"
+           TargetType="Grid">
+        <Setter Property="Background"
+                Value="{StaticResource LG.MediumGrayBrush}" />
+    </Style>
+</ResourceDictionary>

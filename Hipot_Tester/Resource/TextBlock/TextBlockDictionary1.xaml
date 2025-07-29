@@ -1,0 +1,69 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="TextBlock" x:Key="StyleTextBlockTitle1">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0 10 0 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+
+    <Style TargetType="TextBlock"
+           x:Key="StyleTextBlockTitle2">
+        <Setter Property="Foreground"
+                Value="White" />
+        <Setter Property="FontSize"
+                Value="80" />
+        <Setter Property="TextAlignment"
+                Value="Center" />
+        <Setter Property="Margin"
+                Value="0 0 0 0" />
+        <Setter Property="Padding"
+                Value="10" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="HorizontalAlignment"
+                Value="Center" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+        <Setter Property="Background"
+                Value="Black" />
+        <Setter Property="Width"
+                Value="500" />
+        <Setter Property="TextWrapping"
+                Value="Wrap" />
+    </Style>
+    
+    <Style TargetType="TextBlock"
+           x:Key="StyleTextBlockTitle3">
+        <Setter Property="Foreground"
+                Value="White" />
+        <Setter Property="FontSize"
+                Value="10" />
+        <Setter Property="TextAlignment"
+                Value="Center" />
+        <Setter Property="Margin"
+                Value="0 0 0 0" />
+        <Setter Property="Padding"
+                Value="10" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="HorizontalAlignment"
+                Value="Center" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+        <Setter Property="Background"
+                Value="Black" />
+        <Setter Property="Width"
+                Value="500" />
+        <Setter Property="TextWrapping"
+                Value="Wrap" />
+    </Style>
+
+
+
+
+
+</ResourceDictionary>
