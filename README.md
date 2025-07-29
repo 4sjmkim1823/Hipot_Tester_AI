@@ -70,15 +70,15 @@ IDialogService → DialogService (UI 종속성 분리)
 **개선 후 데이터 관리 아키텍처:**
 
 DataManagementViewModel
-↓ (정상 참조)
+↓ (정상 참조)\n
 ✅ DataStorage (싱글톤 패턴)
-↓
-✅ SessionEventArgs (이벤트 인자)
+↓\n
+✅ SessionEventArgs (이벤트 인자)\n
 ✅ TestSession
-↓
-✅ DataClassification (열거형)
-✅ ChartHelper (통계 계산 도우미)
-✅ DataFilterExtensions (데이터 필터링)
+↓\n
+✅ DataClassification (열거형)\n
+✅ ChartHelper (통계 계산 도우미)\n
+✅ DataFilterExtensions (데이터 필터링)\n
 
 -   **핵심 클래스 생성**: 싱글톤 패턴의 `DataStorage`, 이벤트 인자 `SessionEventArgs`, 데이터 분류를 위한 `DataClassification` 열거형 등 필수 클래스를 생성했습니다.
 -   **고급 분석 기능 추가**: 이동 평균, 표준편차, Z-Score 이상치 탐지 등을 수행하는 `ChartHelper`와 데이터 품질 점수를 계산하는 `DataFilterExtensions`를 구현했습니다.
